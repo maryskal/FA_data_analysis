@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Dataset original
 
 ```{r}
-df <- read.csv("./puntuacionesFA.csv")
+df <- read.csv("../datasets/puntuacionesFA.csv")
 ```
 
 En este caso las columnas con filas las identifica como character, pero va a ser un problema ya que en este caso no vamos a utilizar esas columnas para analizar nada, cuando queramos analizar esas columnas utilizaremos los subsets que ya hemos generado.
@@ -48,7 +48,7 @@ En el gráfico se puede observar perfectamente como a medida que aumenta la nota
 Ahora vamos a analizar los directores de las películas votadas. Esto puede ser util para descubrir cuales son los directores mejor valorados por el usuario, para que en el futuro pueda buscar películas que le puedan gustar en base a los directores con mejor nota.
 
 ```{r}
-df <- read.csv("./directores_subset.csv")
+df <- read.csv("../datasets/directores_subset.csv")
 ```
 
 

@@ -25,7 +25,7 @@ if __name__ == "__main__":
     column = args.column
 
     # Cargamos el dataframe original
-    df = pd.read_csv('./puntuacionesFA.csv')
+    df = pd.read_csv('../datasets/puntuacionesFA.csv')
 
     # Aplicar la función a cada fila del DataFrame para desglosar la columna especificada
     filas_desglosadas = df.apply(lambda row: desglosar_lista(row, column), axis=1).explode()
