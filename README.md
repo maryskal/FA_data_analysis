@@ -14,7 +14,11 @@ Inicialmente contamos con un dataset (puntuacionesFA) que recoge todas las pelic
 - generos        
 - nota           
 - votos          
-- votacion 
+- votacion
+
+Para poder ejecutar todo el código es necesario instalar los requirements
+
+`pip install -r requirements.txt`
 
 ## Limpieza de datos
 En el jupyter notebook (1_data_cleaning.ipynb) se realiza una limpieza de datos sobre el dataset general (puntuacionesFA)
