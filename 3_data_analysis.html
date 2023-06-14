@@ -372,27 +372,11 @@ pre code {
 
 <div id="dataset-original" class="section level1">
 <h1>Dataset original</h1>
-<pre class="r"><code>df &lt;- read.csv(&quot;./puntuacionesFA.csv&quot;)
-str(df)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    1941 obs. of  14 variables:
-##  $ titulo     : chr  &quot;Joker &quot; &quot;La ciudad de las estrellas (La La Land) &quot; &quot;Halt and Catch Fire (Serie de TV)&quot; &quot;BoJack Horseman (Serie de TV)&quot; ...
-##  $ año        : int  2019 2016 2014 2014 2012 2010 2008 2003 1999 1997 ...
-##  $ duracion   : chr  &quot;121 min.&quot; &quot;127 min.&quot; &quot;60 min.&quot; &quot;25 min.&quot; ...
-##  $ pais       : chr  &quot;Estados Unidos&quot; &quot;Estados Unidos&quot; &quot;Estados Unidos&quot; &quot;Estados Unidos&quot; ...
-##  $ directores : chr  &quot;[&#39;Todd Phillips&#39;]&quot; &quot;[&#39;Damien Chazelle&#39;]&quot; &quot;[&#39;Christopher Cantwell&#39;, &#39;Christopher C. Rogers&#39;, &#39;Karyn Kusama&#39;, &#39;Juan José Campanella&#39;, &#39;Johan Renck&#39;, &#39;Ed Bi&quot;| __truncated__ &quot;[&#39;Raphael Bob-Waksberg&#39;, &#39;JC Gonzalez&#39;, &#39;Amy Winfrey&#39;, &#39;Joel Moser&#39;, &#39;Martin Cendreda&#39;, &#39;Adam Parton&#39;, &#39;Mike Ho&quot;| __truncated__ ...
-##  $ guionistas : chr  &quot;[&#39;Todd Phillips&#39;, &#39;Scott Silver&#39;]&quot; &quot;[&#39;Damien Chazelle&#39;]&quot; &quot;[&#39;Christopher Cantwell&#39;, &#39;Christopher C. Rogers&#39;, &#39;Jason Cahill&#39;, &#39;Jonathan Lisco&#39;, &#39;Zack Whedon&#39;, &#39;Dahvi Walle&quot;| __truncated__ &quot;[&#39;Raphael Bob-Waksberg&#39;, &#39;Joe Lawson&#39;, &#39;Peter Knight&#39;, &#39;Elijah Aron&#39;, &#39;Jordan Young&#39;, &#39;Mehar Sethi&#39;, &#39;Vera Sant&quot;| __truncated__ ...
-##  $ musicos    : chr  &quot;[&#39;Hildur Guðnadóttir&#39;]&quot; &quot;[&#39;Justin Hurwitz&#39;]&quot; &quot;[&#39;Paul Haslinger&#39;]&quot; &quot;[&#39;Grouplove&#39;, &#39;Jesse Novak&#39;]&quot; ...
-##  $ fotografos : chr  &quot;[&#39;Lawrence Sher&#39;]&quot; &quot;[&#39;Linus Sandgren&#39;]&quot; &quot;[&#39;Nelson Cragg&#39;, &#39;Evans Brown&#39;, &#39;Jeff Jur&#39;]&quot; &quot;[&#39;ShadowMachine Films&#39;, &#39;Tornante Company&#39;, &#39;Netflix&#39;, &#39;Lisa Hanawalt&#39;, &#39;Netflix&#39;]&quot; ...
-##  $ actores    : chr  &quot;[&#39;Joaquin Phoenix&#39;, &#39;Robert De Niro&#39;, &#39;Zazie Beetz&#39;, &#39;Frances Conroy&#39;, &#39;Brett Cullen&#39;, &#39;Bill Camp&#39;, &#39;Shea Whigh&quot;| __truncated__ &quot;[&#39;Emma Stone&#39;, &#39;Ryan Gosling&#39;, &#39;John Legend&#39;, &#39;Rosemarie Dewitt&#39;, &#39;J.K. Simmons&#39;, &#39;Finn Wittrock&#39;, &#39;Sonoya Mizu&quot;| __truncated__ &quot;[&#39;Lee Pace&#39;, &#39;Scoot McNairy&#39;, &#39;Mackenzie Davis&#39;, &#39;Kerry Bishé&#39;, &#39;Toby Huss&#39;, &#39;Aleksa Palladino&#39;, &#39;Annabeth Gish&quot;| __truncated__ &quot;[]&quot; ...
-##  $ productores: chr  &quot;[&#39;DC Comics&#39;, &#39;DC Entertainment&#39;, &#39;Warner Bros.&#39;, &#39;Village Roadshow&#39;, &#39;Bron Studios&#39;, &#39;Creative Wealth Media Fi&quot;| __truncated__ &quot;[&#39;Summit Entertainment&#39;, &#39;Gilbert Films&#39;, &#39;Impostor Pictures&#39;, &#39;Marc Platt Productions&#39;]&quot; &quot;[&#39;AMC Studios&#39;]&quot; &quot;[&#39;ShadowMachine Films&#39;, &#39;Tornante Company&#39;, &#39;Netflix&#39;, &#39;Lisa Hanawalt&#39;, &#39;Netflix&#39;]&quot; ...
-##  $ generos    : chr  &quot;[&#39;Thriller&#39;, &#39;Drama&#39;, &#39;Crimen&#39;, &#39;DC Comics&#39;, &#39;Cómic&#39;, &#39;Payasos&#39;, &#39;Drama psicológico&#39;, &#39;Años 80&#39;]&quot; &quot;[&#39;Musical&#39;, &#39;Romance&#39;, &#39;Comedia&#39;, &#39;Drama&#39;, &#39;Drama romántico&#39;, &#39;Música&#39;, &#39;Jazz&#39;, &#39;Cine dentro del cine&#39;]&quot; &quot;[&#39;Serie de TV&#39;, &#39;Drama&#39;, &#39;Internet / Informática&#39;, &#39;Trabajo/empleo&#39;, &#39;Años 80&#39;, &#39;Años 90&#39;]&quot; &quot;[&#39;Serie de TV&#39;, &#39;Animación&#39;, &#39;Comedia&#39;, &#39;Drama&#39;, &#39;Comedia dramática&#39;, &#39;Comedia negra&#39;, &#39;Cine dentro del cine&#39;, &quot;| __truncated__ ...
-##  $ nota       : num  8 7.5 7.6 8 7.7 7.9 8.8 8 6.9 6.8 ...
-##  $ votos      : num  69408 58319 4517 11520 2781 ...
-##  $ votacion   : int  10 10 10 10 10 10 10 10 10 10 ...</code></pre>
-<p>Como vemos en este caso las columnas con filas las identifica como
-character, pero va a ser un problema ya que en este caso no vamos a
-utilizar esas columnas para analizar nada, cuando queramos analizar esas
-columnas utilizaremos los subsets que ya hemos generado.</p>
+<pre class="r"><code>df &lt;- read.csv(&quot;./puntuacionesFA.csv&quot;)</code></pre>
+<p>En este caso las columnas con filas las identifica como character,
+pero va a ser un problema ya que en este caso no vamos a utilizar esas
+columnas para analizar nada, cuando queramos analizar esas columnas
+utilizaremos los subsets que ya hemos generado.</p>
 <div id="correlación-entre-el-número-de-votos-y-la-nota-media-de-las-películas" class="section level2">
 <h2>Correlación entre el número de votos y la nota media de las
 películas</h2>
@@ -532,7 +516,23 @@ lillie.test(df$votacion[df$directores == &quot;Alfred Hitchcock&quot;])</code></
 <p>Parece que los datos no son normales, además no tenemos una n
 suficiente como para asumir la teoría del límite central, por lo que en
 vez de estudiar la homocedastidad podemos pasar directamente a utilizar
-un test no paramétrico.</p>
+un test no paramétrico. Aun así vamos a demostrar como se calcularía la
+homocedastidad.</p>
+<pre class="r"><code>var.test(df$votacion[df$directores== &quot;Alfred Hitchcock&quot;], df$votacion[df$directores== &quot;Stanley Kubrick&quot;])</code></pre>
+<pre><code>## 
+##  F test to compare two variances
+## 
+## data:  df$votacion[df$directores == &quot;Alfred Hitchcock&quot;] and df$votacion[df$directores == &quot;Stanley Kubrick&quot;]
+## F = 0.08446, num df = 15, denom df = 10, p-value = 4.081e-05
+## alternative hypothesis: true ratio of variances is not equal to 1
+## 95 percent confidence interval:
+##  0.02398284 0.25846343
+## sample estimates:
+## ratio of variances 
+##         0.08445974</code></pre>
+<p>Vemos que los datos, además de no ser normales, no presentan
+homocedastidad. Vamos a pasar a realizar el analisis con el test no
+paramétrico Wilcoxon.</p>
 <pre class="r"><code>wilcox.test(df$votacion[df$directores== &quot;Alfred Hitchcock&quot;], df$votacion[df$directores== &quot;Stanley Kubrick&quot;])</code></pre>
 <pre><code>## Warning in wilcox.test.default(df$votacion[df$directores == &quot;Alfred
 ## Hitchcock&quot;], : cannot compute exact p-value with ties</code></pre>

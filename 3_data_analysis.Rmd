@@ -5,7 +5,7 @@ date: '2023-06-14'
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -13,10 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 df <- read.csv("./puntuacionesFA.csv")
-str(df)
 ```
 
-Como vemos en este caso las columnas con filas las identifica como character, pero va a ser un problema ya que en este caso no vamos a utilizar esas columnas para analizar nada, cuando queramos analizar esas columnas utilizaremos los subsets que ya hemos generado.
+En este caso las columnas con filas las identifica como character, pero va a ser un problema ya que en este caso no vamos a utilizar esas columnas para analizar nada, cuando queramos analizar esas columnas utilizaremos los subsets que ya hemos generado.
 
 ## Correlación entre el número de votos y la nota media de las películas
 Vamos a analizar si las películas que mas gente ve son aquellas con mejor nota, esto sería lo lógico ya que la gente recomienda las películas que le gustan por lo tanto estas se verán mas. Por otro lado está el marketing de las películas que puede hacer que películas malas sean muy vistas.
@@ -96,7 +95,14 @@ lillie.test(df$votacion[df$directores == "Alfred Hitchcock"])
 lillie.test(df$votacion[df$directores == "Stanley Kubrick"])
 ```
 
-Parece que los datos no son normales, además no tenemos una n suficiente como para asumir la teoría del límite central, por lo que en vez de estudiar la homocedastidad podemos pasar directamente a utilizar un test no paramétrico.
+Parece que los datos no son normales, además no tenemos una n suficiente como para asumir la teoría del límite central, por lo que en vez de estudiar la homocedastidad podemos pasar directamente a utilizar un test no paramétrico. Aun así vamos a demostrar como se calcularía la homocedastidad.
+
+```{r}
+var.test(df$votacion[df$directores== "Alfred Hitchcock"], df$votacion[df$directores== "Stanley Kubrick"])
+```
+
+Vemos que los datos, además de no ser normales, no presentan homocedastidad. Vamos a pasar a realizar el analisis con el test no paramétrico Wilcoxon.
+
 ```{r}
 wilcox.test(df$votacion[df$directores== "Alfred Hitchcock"], df$votacion[df$directores== "Stanley Kubrick"])
 ```
