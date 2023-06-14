@@ -24,5 +24,4 @@ Dado que el dataset general cuenta con muchas columnas que están compuestas por
 si se quieren analizar estos datos en concreto es necesario generar un nuevo dataset por cada una de estas columnas, en el que los componentes de cada una de las columnas 
 desglosadas esten representados por una sola fila. Es decir, extender cada lista a lo largo, generando una nueva fila por cada componente de la lista.
 
-![texto cualquiera por si no carga la imagen]
-(https://github.com/maryskal/FA_data_analysis/blob/main/image.png?raw=true)
+![texto cualquiera por si no carga la imagen](https://github.com/maryskal/FA_data_analysis/blob/main/image.png?raw=true)
