@@ -28,7 +28,7 @@ desglosadas esten representados por una sola fila. Es decir, extender cada lista
 
 Para generar los subsets tenemos un ejecutable en el que se introduce la columna de la cual se quiere generar el subset y este se genera y se guarda en la carpeta principal
 
-´python 2_extract_subsets.py -c directores´
+`python 2_extract_subsets.py -c directores`
 
 ## Análisis de datos
 Para el análisis de datos hemos utilizado R.Markdown para generar un informe HTML en el cual hemos analizado las características generales del dataset original (puntuacionesFA) y luego hemos analizado las características de los directores, guionistas y géneros.
