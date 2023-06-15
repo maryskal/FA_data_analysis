@@ -6,12 +6,13 @@ import pandas as pd
 def desglosar_lista(row,column):
     transformada = row[column].strip("[]").split(", ")
     titulo = row["titulo"]
+    pais = row["pais"]
     votos = row["votos"]
     votacion = row["votacion"]
     nota_media = row["nota"]
     desglosado = []
     for i in transformada:
-        desglosado.append([i.strip("''"), titulo, votos, nota_media, votacion])
+        desglosado.append([i.strip("''"), titulo, pais, votos, nota_media, votacion])
     return desglosado
 
 
@@ -31,5 +32,5 @@ if __name__ == "__main__":
     filas_desglosadas = df.apply(lambda row: desglosar_lista(row, column), axis=1).explode()
 
     # Crear un nuevo DataFrame con las filas desglosadas
-    new_df = pd.DataFrame(filas_desglosadas.tolist(), columns=[column, "titulo", "votos", "votacion", "nota"])
-    new_df.to_csv("./" + column + "_subset.csv", index=False)
+    new_df = pd.DataFrame(filas_desglosadas.tolist(), columns=[column, "titulo", "pais", "votos", "votacion", "nota"])
+    new_df.to_csv("../datasets/" + column + "_subset.csv", index=False)
