@@ -44,5 +44,5 @@ Para generar los subsets tenemos un ejecutable en el que se introduce la columna
 `python 2_extract_subsets.py -c directores`
 
 ## Análisis de datos y representaciones gráficas
-Para el análisis de datos hemos utilizado R.Markdown para generar un informe HTML en el cual hemos analizado las características generales del dataset original (puntuacionesFA) y luego hemos analizado las características de los directores, guionistas y géneros. Hemos realizado diferentes análisis estadísticos y representaciones. Todo ello está explicado en el 
+Para el análisis de datos hemos utilizado R.Markdown para generar un informe HTML en el cual hemos analizado las características generales del dataset original (puntuacionesFA) y luego hemos analizado las características de los directores, pero se podría hacer lo mismo sobre guionistas, géneros, fotógrafos... Hemos realizado diferentes análisis estadísticos y representaciones. Todo ello está explicado en el 
 archivo correspondiente
