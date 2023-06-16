@@ -530,7 +530,7 @@ homocedastidad.</p>
 ## sample estimates:
 ## ratio of variances 
 ##         0.08445974</code></pre>
-<p>Vemos que los datos, además de no ser normales, no presentan
+<p>Vemos que los datos, a pesar de no ser normales, presentan
 homocedastidad. Vamos a pasar a realizar el analisis con el test no
 paramétrico Wilcoxon.</p>
 <pre class="r"><code>wilcox.test(direct$votacion[direct$directores== &quot;Alfred Hitchcock&quot;], direct$votacion[direct$directores== &quot;Stanley Kubrick&quot;])</code></pre>

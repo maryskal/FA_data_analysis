@@ -100,7 +100,7 @@ Parece que los datos no son normales, además no tenemos una n suficiente como p
 var.test(direct$votacion[direct$directores== "Alfred Hitchcock"], direct$votacion[direct$directores== "Stanley Kubrick"])
 ```
 
-Vemos que los datos, además de no ser normales, no presentan homocedastidad. Vamos a pasar a realizar el analisis con el test no paramétrico Wilcoxon.
+Vemos que los datos, a pesar de no ser normales, presentan homocedastidad. Vamos a pasar a realizar el analisis con el test no paramétrico Wilcoxon.
 
 ```{r}
 wilcox.test(direct$votacion[direct$directores== "Alfred Hitchcock"], direct$votacion[direct$directores== "Stanley Kubrick"])
