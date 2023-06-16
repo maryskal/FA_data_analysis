@@ -24,6 +24,7 @@ Inicialmente contamos con un dataset (puntuacionesFA) que recoge todas las pelic
 - votos          
 - votacion
 
+
 Este dataset es util para poder estudiar las características de las películas mejor valoradas y peor valoradas de un usuario. Con ello puede sacar conclusiones de cuales son las 
 características de las películas que más le gustan para poder buscar nuevas películas en el futuro.
 
